@@ -1,27 +1,27 @@
-import React from "react";
-import ServiceCard from "./ServiceCard";
-import { MdOutlineWeb } from "react-icons/md";
-import { FaCode } from "react-icons/fa";
-import { GiShoppingBag } from "react-icons/gi";
+import React from 'react';
+import ServiceCard from './ServiceCard';
+import { MdOutlineWeb } from 'react-icons/md';
+import { FaCode } from 'react-icons/fa';
+import { GiShoppingBag } from 'react-icons/gi';
 
 const serviceData = [
   {
     id: 1,
     icon: <MdOutlineWeb size={45} />,
-    title: "Web Design",
-    color: "bg-tertiary",
+    title: 'Web Design',
+    color: 'bg-tertiary',
   },
   {
     id: 2,
     icon: <FaCode size={45} />,
-    title: "Development",
-    color: "bg-secondary",
+    title: 'Development',
+    color: 'bg-secondary',
   },
   {
     id: 3,
     icon: <GiShoppingBag size={45} />,
-    title: "Ecommerce",
-    color: "bg-primary",
+    title: 'Ecommerce',
+    color: 'bg-primary',
   },
 ];
 
@@ -48,6 +48,7 @@ const Services = () => {
       >
         {serviceData.map((ele) => (
           <ServiceCard
+            key={ele.id}
             id={ele.id}
             icon={ele.icon}
             title={ele.title}
